@@ -3,37 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chúc Mừng 20/10</title>
+    <title>Món Quà Đặc Biệt 20/10</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Lora&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="entry-screen">
-        <button id="entry-button">Nhấn để nhận quà!</button>
+    <div class="loading-screen">
+        <div class="loading-bar"></div>
+        <p class="loading-text">Đang chuẩn bị món quà...</p>
     </div>
 
-    <main id="main-content" style="display: none;">
-        <div class="falling-petals">
-            <span></span><span></span><span></span><span></span><span></span>
-            <span></span><span></span><span></span><span></span><span></span>
-            <span></span><span></span><span></span><span></span><span></span>
-        </div>
+    <canvas class="webgl"></canvas>
 
-        <div class="container">
-            <h1 class="main-title">Chúc Mừng 20/10</h1>
-            <div class="message-box">
-                <p>Gửi đến những bông hoa xinh đẹp của lớp,</p>
-                <p>Cảm ơn các bạn đã luôn mang đến tiếng cười và sắc màu cho tập thể. Chúc các bạn có một ngày 20/10 thật vui vẻ, hạnh phúc và luôn tỏa sáng theo cách riêng của mình!</p>
-                <p class="quote">"Hãy sống như một đóa hoa, không vì ai mà nở rộ, cũng chẳng vì ai mà lụi tàn."</p>
+    <main class="content">
+        <h1 class="main-title">Chúc Mừng Ngày 20/10</h1>
+        
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <p class="quote">"Gửi đến những bông hoa xinh đẹp của lớp, cảm ơn các bạn đã luôn mang đến tiếng cười và sắc màu cho tập thể. Chúc các bạn một ngày 20/10 thật vui vẻ, hạnh phúc và luôn tỏa sáng!"</p>
+                </div>
+                <div class="swiper-slide">
+                    <p class="quote">"Hãy sống như một đóa hoa, không vì ai mà nở rộ, cũng chẳng vì ai mà lụi tàn. Luôn là chính mình và tỏa sáng nhé!" [1]</p>
+                </div>
+                <div class="swiper-slide">
+                    <p class="quote">"Phụ nữ là để yêu, không phải là để hiểu." [2] – Oscar Wilde</p>
+                </div>
+                 <div class="swiper-slide">
+                    <p class="quote">"Không gì khiến người phụ nữ xinh đẹp hơn là niềm tin rằng nàng xinh đẹp." [3] – Sophia Loren</p>
+                </div>
             </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
         </div>
     </main>
-    
+
     <audio id="background-music" src="path/to/your/music.mp3" loop></audio>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+    
     <script src="script.js"></script>
 </body>
 </html>
